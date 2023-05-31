@@ -77,6 +77,7 @@ const Input = () => {
         placeholder="Type Something..."
         onChange={(e) => setText(e.target.value)}
         value={text}
+        onKeyDown={handleKey}
       />
       <div className="send">
         <img src={Attach} alt=" " />
@@ -85,7 +86,6 @@ const Input = () => {
           id="file"
           style={{ display: "none" }}
           onChange={(e) => setImg(e.target.files[0])}
-          onKeyDown={handleKey}
         />
         <label htmlFor="file">
           <img src={Img} alt="" />
