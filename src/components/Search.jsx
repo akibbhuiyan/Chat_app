@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import {
   collection,
   doc,
@@ -18,7 +18,6 @@ const Search = () => {
   const [userName, setUserName] = useState("");
   const [user, setUser] = useState(null);
   const [err, setErr] = useState(false);
-  console.log(user);
   const handleSearch = async () => {
     const q = query(
       collection(db, "users"),
